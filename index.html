@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="refresh" content="5; url=https://amosaerospace.com/" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      .container {
+        text-align: center;
+        padding: 48px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+      }
+      .description {
+        display: flex;
+        flex-direction: column;
+      }
+      .loader {
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 1.5rem;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      a {
+        color: #3498db;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        width: 100px;
+        height: auto;
+        display: block;
+        margin: 0 auto 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="Logo" />
+      <h1>Redirecting</h1>
+      <div class="loader"></div>
+      <p>
+        <span>AutoMicroUAS is now amosAerospace,</span>
+        redirecting you in <span id="countdown">5</span> seconds.
+        <p>
+            If you are not redirected automatically,
+            <a href="https://amosaerospace.com/">click here</a>.
+        </p>
+      </p>
+     
+    </div>
+    <script>
+      let countdown = 5;
+      const countdownElement = document.getElementById("countdown");
+      setInterval(function () {
+        countdown--;
+        if (countdown > 0) {
+          countdownElement.textContent = countdown;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
